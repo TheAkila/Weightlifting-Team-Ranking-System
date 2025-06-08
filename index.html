@@ -8,13 +8,19 @@
   <link rel="icon" href="assets/team-logo.png">
 
   <script>
-    // Simple password protection
-    const password = prompt("Enter password to access the ranking system:");
-    if (password !== "uoc2025") {
-      document.body.innerHTML = "<h1 class='text-center text-2xl mt-20 text-red-600 font-bold'>Access Denied</h1>";
-      throw new Error("Unauthorized access");
-    }
+    window.addEventListener("DOMContentLoaded", () => {
+      const password = prompt("Enter password to access the ranking system:");
+      if (password !== "uoc2025") {
+        document.body.innerHTML = "<h1 class='text-center text-2xl mt-20 text-red-600 font-bold'>Access Denied</h1>";
+      } else {
+        // Only load app.js if password is correct
+        const script = document.createElement("script");
+        script.src = "app.js";
+        document.body.appendChild(script);
+      }
+    });
   </script>
+  
   
 </head>
 <body class="bg-gradient-to-br from-gray-100 to-gray-200 text-gray-800 font-sans">
@@ -67,6 +73,6 @@
     </div>
   </div>
 
-  <script src="app.js"></script>
+  
 </body>
 </html>
