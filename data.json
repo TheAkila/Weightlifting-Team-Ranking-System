@@ -1,14 +1,14 @@
 [
     {
-      "name": "John Silva",
+      "name": "Senindu ",
       "gender": "M",
-      "weightClass": "73kg",
+      "weightClass": "79kg",
       "snatch": 110,
       "cleanJerk": 135,
       "total": 245
     },
     {
-      "name": "Kasun Perera",
+      "name": "Sahan",
       "gender": "M",
       "weightClass": "81kg",
       "snatch": 105,
@@ -16,11 +16,56 @@
       "total": 235
     },
     {
-      "name": "Sashini Wijesinghe",
-      "gender": "F",
+      "name": "Ireshan ",
+      "gender": "M",
       "weightClass": "64kg",
       "snatch": 75,
       "cleanJerk": 95,
       "total": 170
     }
+
+    {
+        "name": "Chamodya ",
+        "gender": "M",
+        "weightClass": "64kg",
+        "snatch": 75,
+        "cleanJerk": 95,
+        "total": 170
+      }
+
+      {
+        "name": "Anuradha ",
+        "gender": "M",
+        "weightClass": "64kg",
+        "snatch": 75,
+        "cleanJerk": 95,
+        "total": 170
+      }
+
+      {
+        "name": "Nisal ",
+        "gender": "M",
+        "weightClass": "64kg",
+        "snatch": 75,
+        "cleanJerk": 95,
+        "total": 170
+      }
+
+      {
+        "name": "Didula ",
+        "gender": "M",
+        "weightClass": "64kg",
+        "snatch": 75,
+        "cleanJerk": 95,
+        "total": 170
+      }
+
+      {
+        "name": "Kavindu ",
+        "gender": "M",
+        "weightClass": "64kg",
+        "snatch": 75,
+        "cleanJerk": 95,
+        "total": 170
+      }
   ]
