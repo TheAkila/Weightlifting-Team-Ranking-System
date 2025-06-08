@@ -1,71 +1,138 @@
 [
     {
-      "name": "Senindu ",
+      "name": "Senindu",
       "gender": "M",
+      "team": "Male Team B",
       "weightClass": "79kg",
       "snatch": 110,
       "cleanJerk": 135,
       "total": 245
     },
     {
-      "name": "Sahan",
+      "name": "Dulneth",
       "gender": "M",
-      "weightClass": "81kg",
+      "team": "Male Team A",
+      "weightClass": "65kg",
       "snatch": 105,
       "cleanJerk": 130,
       "total": 235
     },
     {
-      "name": "Ireshan ",
+      "name": "Ireshan",
       "gender": "M",
-      "weightClass": "64kg",
+      "team": "Male Team B",
+      "weightClass": "79kg",
       "snatch": 75,
       "cleanJerk": 95,
       "total": 170
     },
-
     {
-        "name": "Chamodya ",
-        "gender": "M",
-        "weightClass": "64kg",
-        "snatch": 75,
-        "cleanJerk": 95,
-        "total": 170
-      },
-
-      {
-        "name": "Anuradha ",
-        "gender": "M",
-        "weightClass": "64kg",
-        "snatch": 75,
-        "cleanJerk": 95,
-        "total": 170
-      },
-
-      {
-        "name": "Nisal ",
-        "gender": "M",
-        "weightClass": "64kg",
-        "snatch": 75,
-        "cleanJerk": 95,
-        "total": 170
-      },
-
-      {
-        "name": "Didula ",
-        "gender": "M",
-        "weightClass": "64kg",
-        "snatch": 75,
-        "cleanJerk": 95,
-        "total": 170
-      },
-
-      {
-        "name": "Kavindu ",
-        "gender": "M",
-        "weightClass": "64kg",
-        "snatch": 75,
-        "cleanJerk": 95,
-        "total": 170
-      }
+      "name": "Chamodya",
+      "gender": "M",
+      "team": "Male Team B",
+      "weightClass": "88kg",
+      "snatch": 75,
+      "cleanJerk": 95,
+      "total": 170
+    },
+    {
+      "name": "Anuradha",
+      "gender": "M",
+      "team": "Male Team B",
+      "weightClass": "60kg",
+      "snatch": 75,
+      "cleanJerk": 95,
+      "total": 170
+    },
+    {
+      "name": "Nisal",
+      "gender": "M",
+      "team": "Male Team B",
+      "weightClass": "110kg+",
+      "snatch": 75,
+      "cleanJerk": 95,
+      "total": 170
+    },
+    {
+      "name": "Didula",
+      "gender": "M",
+      "team": "Male Team B",
+      "weightClass": "79kg",
+      "snatch": 75,
+      "cleanJerk": 95,
+      "total": 170
+    },
+    {
+      "name": "Kavindu",
+      "gender": "M",
+      "team": "Male Team B",
+      "weightClass": "79kg",
+      "snatch": 75,
+      "cleanJerk": 95,
+      "total": 170
+    },
+    {
+      "name": "Vishwa",
+      "gender": "M",
+      "team": "Male Team A",
+      "weightClass": "60kg",
+      "snatch": 80,
+      "cleanJerk": 95,
+      "total": 175
+    },
+    {
+      "name": "Sahan",
+      "gender": "M",
+      "team": "Male Team A",
+      "weightClass": "65kg",
+      "snatch": 60,
+      "cleanJerk": 85,
+      "total": 145
+    },
+    {
+      "name": "Ashen",
+      "gender": "M",
+      "team": "Male Team A",
+      "weightClass": "71kg",
+      "snatch": 100,
+      "cleanJerk": 120,
+      "total": 220
+    },
+    {
+      "name": "Maale",
+      "gender": "M",
+      "team": "Male Team A",
+      "weightClass": "79kg",
+      "snatch": 125,
+      "cleanJerk": 130,
+      "total": 255
+    },
+    {
+      "name": "Gotta",
+      "gender": "M",
+      "team": "Male Team A",
+      "weightClass": "88kg",
+      "snatch": 110,
+      "cleanJerk": 135,
+      "total": 245
+    },
+    {
+      "name": "Akila",
+      "gender": "M",
+      "team": "Male Team A",
+      "weightClass": "94kg",
+      "snatch": 70,
+      "cleanJerk": 90,
+      "total": 160
+    },
+    {
+      "name": "Kavindu",
+      "gender": "M",
+      "team": "Male Team B",
+      "weightClass": "64kg",
+      "snatch": 75,
+      "cleanJerk": 95,
+      "total": 170
+    }
   ]
+  
