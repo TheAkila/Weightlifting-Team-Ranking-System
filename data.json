@@ -1,0 +1,26 @@
+[
+    {
+      "name": "John Silva",
+      "gender": "M",
+      "weightClass": "73kg",
+      "snatch": 110,
+      "cleanJerk": 135,
+      "total": 245
+    },
+    {
+      "name": "Kasun Perera",
+      "gender": "M",
+      "weightClass": "81kg",
+      "snatch": 105,
+      "cleanJerk": 130,
+      "total": 235
+    },
+    {
+      "name": "Sashini Wijesinghe",
+      "gender": "F",
+      "weightClass": "64kg",
+      "snatch": 75,
+      "cleanJerk": 95,
+      "total": 170
+    }
+  ]
