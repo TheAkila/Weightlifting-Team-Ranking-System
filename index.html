@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UoC Weightlifting Rankings</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" href="assets/team-logo.png">
+
+  <script>
+    // Simple password protection
+    const password = prompt("Enter password to access the ranking system:");
+    if (password !== "uoc2025") {
+      document.body.innerHTML = "<h1 class='text-center text-2xl mt-20 text-red-600 font-bold'>Access Denied</h1>";
+      throw new Error("Unauthorized access");
+    }
+  </script>
+  
+</head>
+<body class="bg-gradient-to-br from-gray-100 to-gray-200 text-gray-800 font-sans">
+
+  <div class="max-w-6xl mx-auto p-4">
+    <!-- Header with logos -->
+    <header class="flex flex-col md:flex-row items-center justify-between mb-8 bg-white p-4 rounded-xl shadow-md gap-4">
+      <img src="assets/uni-logo.png" alt="University of Colombo Logo" class="h-16" />
+      <h1 class="text-2xl md:text-3xl font-bold text-center text-indigo-900">University of Colombo Weightlifting Rankings</h1>
+      <img src="assets/team-logo.png" alt="Team Logo" class="h-16" />
+    </header>
+
+    <!-- Filters -->
+    <div class="flex flex-wrap gap-4 mb-6 justify-center">
+      <select id="genderFilter" class="border border-gray-300 bg-white p-2 rounded shadow-sm">
+        <option value="">All Genders</option>
+        <option value="M">Mens</option>
+        <option value="F">Womens</option>
+      </select>
+      <select id="weightFilter" class="border border-gray-300 bg-white p-2 rounded shadow-sm">
+        <option value="">All Weight Classes</option>
+      </select>
+      <select id="teamFilter" class="border border-gray-300 bg-white p-2 rounded shadow-sm">
+        <option value="">All Teams</option>
+        <option value="Team A">Mens A Team</option>
+        <option value="Team B">Mens B Team</option>
+        <option value="Past Lifter">Past Lifter</option>
+      </select>
+      <button id="resetBtn" class="bg-red-100 hover:bg-red-200 text-red-800 font-semibold px-4 py-2 rounded shadow-sm">Reset Filters</button>
+    </div>
+
+    <!-- Table -->
+    <div class="bg-white p-4 rounded-xl shadow-lg overflow-x-auto">
+      <table class="w-full text-sm text-left">
+        <thead class="text-xs uppercase bg-indigo-100 text-indigo-900">
+          <tr>
+            <th class="px-4 py-3">Rank</th>
+            <th class="px-4 py-3">Name</th>
+            <th class="px-4 py-3">Weight Class</th>
+            <th class="px-4 py-3">Snatch</th>
+            <th class="px-4 py-3">C&J</th>
+            <th class="px-4 py-3">Total</th>
+            <th class="px-4 py-3">Team</th>
+          </tr>
+        </thead>
+        <tbody id="rankingTable" class="divide-y divide-gray-200">
+          <!-- Dynamic rows go here -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
