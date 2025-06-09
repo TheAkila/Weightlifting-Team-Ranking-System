@@ -51,10 +51,39 @@
   
     <img src="assets/uni-logo.png" alt="UoC Logo" class="relative z-10 h-20 md:h-24 object-contain" />
   
-    <h1 class="relative z-10 mt-4 md:mt-0 text-4xl font-extrabold tracking-wide text-center md:text-left
-      text-shadow-lg" style="text-shadow: 2px 2px 8px #6b21a8, 0 0 10px #a78bfa;">
+    <style>
+      @keyframes glowPulse {
+        0%, 100% {
+          text-shadow:
+            0 0 6px #7c3aed,
+            0 0 12px #8b5cf6,
+            0 0 18px #a78bfa,
+            0 0 30px #c4b5fd;
+        }
+        50% {
+          text-shadow:
+            0 0 10px #7c3aed,
+            0 0 20px #8b5cf6,
+            0 0 28px #a78bfa,
+            0 0 40px #c4b5fd;
+        }
+      }
+    
+      .glow-text {
+        animation: glowPulse 3s ease-in-out infinite;
+        letter-spacing: 0.05em;
+      }
+    </style>
+    
+    <h1 class="relative z-10 mt-4 md:mt-0 text-4xl font-extrabold tracking-wide text-center md:text-left glow-text">
       UOC Weightlifting
     </h1>
+    
+    <h6 class="relative z-10 mt-2 md:mt-0 text-base font-semibold tracking-wide text-center md:text-left glow-text">
+      Powered by LiftingSocial
+    </h6>
+    
+    
   
     <img src="assets/team-logo.png" alt="Team Logo" class="relative z-10 h-20 md:h-24 object-contain" />
   </header>
@@ -77,9 +106,35 @@
   
 
     <!-- COUNTDOWN TIMER -->
-    <div id="countdownBox" class="bg-yellow-100 text-yellow-900 px-4 py-2 rounded mb-4 text-center font-semibold text-lg">
-      Countdown to Festival Meet: <span id="countdownTimer">Loading...</span>
+    <div id="countdownBox" class="bg-gradient-to-r from-yellow-50 via-yellow-100 to-yellow-50 text-yellow-900 px-6 py-3 rounded-lg mb-6 text-center font-medium text-lg font-sans shadow-sm border border-yellow-300 transition-transform duration-300 hover:scale-[1.02] select-none">
+      Countdown to Festival:
+      <span id="countdownTimer" class="inline-block opacity-0 animate-fadeIn text-gray-900 font-semibold tracking-wide ml-2">
+        Loading...
+      </span>
     </div>
+    <style>
+      /* Subtle fade-in for countdown text */
+      @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(-5px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+    
+      .animate-fadeIn {
+        animation: fadeIn 0.6s ease-out forwards;
+      }
+    
+      /* Optional: Reduce motion on accessibility preference */
+      @media (prefers-reduced-motion: reduce) {
+        .animate-fadeIn {
+          animation: none;
+          opacity: 1;
+        }
+      }
+    </style>
+        
+
+
+
 
     <div id="controls" class="flex flex-wrap gap-4 mb-6 justify-center">
       <select id="genderFilter" class="p-2 border rounded">
@@ -94,13 +149,13 @@
 
       <select id="teamFilter" class="p-2 border rounded">
         <option value="">All Teams</option>
-        <option value="Team A">Mens A Team</option>
-        <option value="Team B">Mens B Team</option>
+        <option value="Team A">A Team</option>
+        <option value="Team B">B Team</option>
         <option value="Past Lifter">Past Lifter</option>
       </select>
 
       <button id="sortTotalBtn" class="bg-indigo-500 hover:bg-indigo-600 text-white px-4 py-2 rounded">Sort by Total</button>
-      <button id="sortSinclairBtn" class="bg-gray-300 hover:bg-gray-400 text-gray-900 px-4 py-2 rounded">Sort by Sinclair</button>
+      <button id="sortSinclairBtn" class="bg-indigo-500 hover:bg-indigo-600 text-white px-4 py-2 rounded">Sort by Sinclair</button>
 
       <button id="resetBtn" class="bg-red-200 text-red-800 px-4 py-2 rounded">Reset Filters</button>
       <button onclick="window.print()" class="bg-green-100 text-green-900 px-4 py-2 rounded">Print Rankings</button>
