@@ -38,11 +38,43 @@
   <!-- APP CONTENT - initially hidden -->
   <div id="appContent" style="display:none;">
 
-    <header class="flex flex-col md:flex-row items-center justify-between mb-6 bg-white p-4 rounded shadow">
-      <img src="assets/uni-logo.png" alt="UoC Logo" class="h-16" />
-      <h1 class="text-3xl font-bold text-indigo-900 text-center md:text-left">University of Colombo Weightlifting Rankings</h1>
-      <img src="assets/team-logo.png" alt="Team Logo" class="h-16" />
-    </header>
+    <header class="flex flex-col md:flex-row items-center justify-between mb-8 p-6 rounded-lg 
+    bg-gradient-to-r from-purple-700 via-purple-500 to-purple-400 
+    shadow-[0_8px_15px_rgba(128,0,128,0.4),0_3px_6px_rgba(128,0,128,0.3)] 
+    text-white relative overflow-hidden">
+  
+    <!-- Shiny overlay effect -->
+    <div class="absolute top-0 left-0 w-full h-full pointer-events-none">
+      <div class="absolute -top-20 -left-20 w-40 h-40 bg-white opacity-20 rounded-full blur-3xl animate-shiny"></div>
+      <div class="absolute top-10 right-10 w-32 h-32 bg-white opacity-10 rounded-full blur-2xl animate-shiny delay-1000"></div>
+    </div>
+  
+    <img src="assets/uni-logo.png" alt="UoC Logo" class="relative z-10 h-20 md:h-24 object-contain" />
+  
+    <h1 class="relative z-10 mt-4 md:mt-0 text-4xl font-extrabold tracking-wide text-center md:text-left
+      text-shadow-lg" style="text-shadow: 2px 2px 8px #6b21a8, 0 0 10px #a78bfa;">
+      UOC Weightlifting
+    </h1>
+  
+    <img src="assets/team-logo.png" alt="Team Logo" class="relative z-10 h-20 md:h-24 object-contain" />
+  </header>
+  
+  <style>
+    @keyframes shiny {
+      0%, 100% {
+        transform: translateX(-50%) translateY(0) scale(1);
+        opacity: 0.2;
+      }
+      50% {
+        transform: translateX(50%) translateY(5px) scale(1.1);
+        opacity: 0.5;
+      }
+    }
+    .animate-shiny {
+      animation: shiny 3s ease-in-out infinite;
+    }
+  </style>
+  
 
     <!-- COUNTDOWN TIMER -->
     <div id="countdownBox" class="bg-yellow-100 text-yellow-900 px-4 py-2 rounded mb-4 text-center font-semibold text-lg">
@@ -312,7 +344,7 @@
     renderTable();
 
     // Start countdown timer to your meet
-    startCountdown(new Date("2025-07-15T09:00:00"));
+    startCountdown(new Date("2025-07-15T08:00:00"));
   }
 </script>
 
