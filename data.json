@@ -62,6 +62,16 @@
     "cleanJerk": 50,
     "total": 100
   },
+
+  {
+    "name": "Sahan W",
+    "gender": "M",
+    "team": "Team B",
+    "weightClass": "79kg",
+    "snatch": 45,
+    "cleanJerk": 55,
+    "total": 100
+  },
   {
     "name": "Kavindu",
     "gender": "M",
