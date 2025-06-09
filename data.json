@@ -4,6 +4,7 @@
     "gender": "M",
     "team": "Team B",
     "weightClass": "79kg",
+    "bodyweight": 78.9,
     "snatch": 75,
     "cleanJerk": 95,
     "total": 170
@@ -13,6 +14,7 @@
     "gender": "M",
     "team": "Team B",
     "weightClass": "65kg",
+    "bodyweight": 64.8,
     "snatch": 75,
     "cleanJerk": 90,
     "total": 165
@@ -22,6 +24,7 @@
     "gender": "M",
     "team": "Team B",
     "weightClass": "71kg",
+    "bodyweight": 70.5,
     "snatch": 65,
     "cleanJerk": 75,
     "total": 140
@@ -31,6 +34,7 @@
     "gender": "M",
     "team": "Team B",
     "weightClass": "88kg",
+    "bodyweight": 87.2,
     "snatch": 60,
     "cleanJerk": 80,
     "total": 140
@@ -40,6 +44,7 @@
     "gender": "M",
     "team": "Team B",
     "weightClass": "60kg",
+    "bodyweight": 59.5,
     "snatch": 60,
     "cleanJerk": 80,
     "total": 140
@@ -49,6 +54,7 @@
     "gender": "M",
     "team": "Team B",
     "weightClass": "110kg+",
+    "bodyweight": 111,
     "snatch": 50,
     "cleanJerk": 50,
     "total": 100
@@ -58,16 +64,17 @@
     "gender": "M",
     "team": "Team B",
     "weightClass": "79kg",
+    "bodyweight": 78.7,
     "snatch": 50,
     "cleanJerk": 50,
     "total": 100
   },
-
   {
     "name": "Sahan W",
     "gender": "M",
     "team": "Team B",
     "weightClass": "79kg",
+    "bodyweight": 78.5,
     "snatch": 45,
     "cleanJerk": 55,
     "total": 100
@@ -77,6 +84,7 @@
     "gender": "M",
     "team": "Team B",
     "weightClass": "88kg",
+    "bodyweight": 87.8,
     "snatch": 75,
     "cleanJerk": 95,
     "total": 170
@@ -86,6 +94,7 @@
     "gender": "M",
     "team": "Team A",
     "weightClass": "60kg",
+    "bodyweight": 59.3,
     "snatch": 80,
     "cleanJerk": 95,
     "total": 175
@@ -95,6 +104,7 @@
     "gender": "M",
     "team": "Team B",
     "weightClass": "60kg",
+    "bodyweight": 59.8,
     "snatch": 65,
     "cleanJerk": 80,
     "total": 145
@@ -104,6 +114,7 @@
     "gender": "M",
     "team": "Team A",
     "weightClass": "71kg",
+    "bodyweight": 70.9,
     "snatch": 105,
     "cleanJerk": 125,
     "total": 230
@@ -113,6 +124,7 @@
     "gender": "M",
     "team": "Team A",
     "weightClass": "79kg",
+    "bodyweight": 78.6,
     "snatch": 130,
     "cleanJerk": 140,
     "total": 270
@@ -122,6 +134,7 @@
     "gender": "M",
     "team": "Team A",
     "weightClass": "88kg",
+    "bodyweight": 87.5,
     "snatch": 110,
     "cleanJerk": 140,
     "total": 250
@@ -131,154 +144,149 @@
     "gender": "M",
     "team": "Team A",
     "weightClass": "94kg",
+    "bodyweight": 93.2,
     "snatch": 70,
     "cleanJerk": 90,
     "total": 160
   },
-  
-
   {
-      "name": "Killer",
-      "gender": "M",
-      "team": "Past Lifter",
-      "weightClass": "110kg",
-      "snatch": 110,
-      "cleanJerk": 135,
-      "total":245
-    },
-
-    {
-      "name": "Dhananjaya",
-      "gender": "M",
-      "team": "Team B",
-      "weightClass": "94kg",
-      "snatch": 70,
-      "cleanJerk": 90,
-      "total":160
-    },
-
-    {
-      "name": "Sanka",
-      "gender": "M",
-      "team": "Past Lifter",
-      "weightClass": "110kg+",
-      "snatch": 60,
-      "cleanJerk": 80,
-      "total":140
-    },
-
-
-   
-
-    {
-      "name": "Poorni",
-      "gender": "F",
-      "team": "Team A",
-      "weightClass": "77kg",
-      "snatch": 50,
-      "cleanJerk": 60,
-      "total":110
-    },
-
-    {
-      "name": "Venumi",
-      "gender": "F",
-      "team": "Team A",
-      "weightClass": "48kg",
-      "snatch": 35,
-      "cleanJerk": 45,
-      "total":80
-    },
-
-    {
-      "name": "Piyumi",
-      "gender": "F",
-      "team": "Team A",
-      "weightClass": "53kg",
-      "snatch": 40,
-      "cleanJerk": 50,
-      "total":90
-    },
-
-    {
-      "name": "Yasali",
-      "gender": "F",
-      "team": "Team A",
-      "weightClass": "69kg",
-      "snatch": 42,
-      "cleanJerk": 50,
-      "total":92
-    },
-
-    {
-      "name": "Madumekala",
-      "gender": "F",
-      "team": "Team A",
-      "weightClass": "69kg",
-      "snatch": 38,
-      "cleanJerk": 49,
-      "total":83
-    },
-
-    {
-      "name": "Shermila",
-      "gender": "F",
-      "team": "Team A",
-      "weightClass": "86kg",
-      "snatch": 40,
-      "cleanJerk": 55,
-      "total":95
-    },
-
-    {
-      "name": "Charuni",
-      "gender": "F",
-      "team": "Team A",
-      "weightClass": "86kg+",
-      "snatch": 0,
-      "cleanJerk": 0,
-      "total":0
-    },
-
-    {
-      "name": "Amandi",
-      "gender": "F",
-      "team": "Team A",
-      "weightClass": "77kg",
-      "snatch": 28,
-      "cleanJerk": 35,
-      "total":63
-    },
-
-    {
-      "name": "Ushakini",
-      "gender": "F",
-      "team": "Team B",
-      "weightClass": "53kg",
-      "snatch": 25,
-      "cleanJerk": 30,
-      "total":55
-    },
-
-    {
-      "name": "Sithumini",
-      "gender": "F",
-      "team": "Team B",
-      "weightClass": "63kg",
-      "snatch": 25,
-      "cleanJerk": 30,
-      "total":55
-    },
-
-    {
-      "name": "Theekshana",
-      "gender": "F",
-      "team": "Team B",
-      "weightClass": "48kg",
-      "snatch": 25,
-      "cleanJerk": 30,
-      "total":55
-    }
-
-
+    "name": "Killer",
+    "gender": "M",
+    "team": "Past Lifter",
+    "weightClass": "110kg",
+    "bodyweight": 109.7,
+    "snatch": 110,
+    "cleanJerk": 135,
+    "total": 245
+  },
+  {
+    "name": "Dhananjaya",
+    "gender": "M",
+    "team": "Team B",
+    "weightClass": "94kg",
+    "bodyweight": 93.8,
+    "snatch": 70,
+    "cleanJerk": 90,
+    "total": 160
+  },
+  {
+    "name": "Sanka",
+    "gender": "M",
+    "team": "Past Lifter",
+    "weightClass": "110kg+",
+    "bodyweight": 111.5,
+    "snatch": 60,
+    "cleanJerk": 80,
+    "total": 140
+  },
+  {
+    "name": "Poorni",
+    "gender": "F",
+    "team": "Team A",
+    "weightClass": "77kg",
+    "bodyweight": 76.4,
+    "snatch": 50,
+    "cleanJerk": 60,
+    "total": 110
+  },
+  {
+    "name": "Venumi",
+    "gender": "F",
+    "team": "Team A",
+    "weightClass": "48kg",
+    "bodyweight": 47.8,
+    "snatch": 35,
+    "cleanJerk": 45,
+    "total": 80
+  },
+  {
+    "name": "Piyumi",
+    "gender": "F",
+    "team": "Team A",
+    "weightClass": "58kg",
+    "bodyweight": 52.3,
+    "snatch": 40,
+    "cleanJerk": 50,
+    "total": 90
+  },
+  {
+    "name": "Yasali",
+    "gender": "F",
+    "team": "Team A",
+    "weightClass": "69kg",
+    "bodyweight": 68.9,
+    "snatch": 42,
+    "cleanJerk": 50,
+    "total": 92
+  },
+  {
+    "name": "Madumekala",
+    "gender": "F",
+    "team": "Team A",
+    "weightClass": "69kg",
+    "bodyweight": 68.4,
+    "snatch": 38,
+    "cleanJerk": 49,
+    "total": 83
+  },
+  {
+    "name": "Shermila",
+    "gender": "F",
+    "team": "Team A",
+    "weightClass": "86kg",
+    "bodyweight": 85.3,
+    "snatch": 40,
+    "cleanJerk": 55,
+    "total": 95
+  },
+  {
+    "name": "Charuni",
+    "gender": "F",
+    "team": "Team A",
+    "weightClass": "86kg+",
+    "bodyweight": 87,
+    "snatch": 0,
+    "cleanJerk": 0,
+    "total": 0
+  },
+  {
+    "name": "Amandi",
+    "gender": "F",
+    "team": "Team A",
+    "weightClass": "77kg",
+    "bodyweight": 76.2,
+    "snatch": 28,
+    "cleanJerk": 35,
+    "total": 63
+  },
+  {
+    "name": "Ushakini",
+    "gender": "F",
+    "team": "Team B",
+    "weightClass": "53kg",
+    "bodyweight": 52.7,
+    "snatch": 25,
+    "cleanJerk": 30,
+    "total": 55
+  },
+  {
+    "name": "Sithumini",
+    "gender": "F",
+    "team": "Team B",
+    "weightClass": "63kg",
+    "bodyweight": 62.5,
+    "snatch": 25,
+    "cleanJerk": 30,
+    "total": 55
+  },
+  {
+    "name": "Theekshana",
+    "gender": "F",
+    "team": "Team B",
+    "weightClass": "48kg",
+    "bodyweight": 47.9,
+    "snatch": 25,
+    "cleanJerk": 30,
+    "total": 55
+  }
 ]
