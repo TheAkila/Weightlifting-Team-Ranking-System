@@ -157,8 +157,20 @@
       <button id="sortTotalBtn" class="bg-indigo-500 hover:bg-indigo-600 text-white px-4 py-2 rounded">Sort by Total</button>
       <button id="sortSinclairBtn" class="bg-indigo-500 hover:bg-indigo-600 text-white px-4 py-2 rounded">Sort by Sinclair</button>
 
-      <button id="resetBtn" class="bg-red-200 text-red-800 px-4 py-2 rounded">Reset Filters</button>
-      <button onclick="window.print()" class="bg-green-100 text-green-900 px-4 py-2 rounded">Print Rankings</button>
+      <button 
+  id="resetBtn" 
+  class="bg-red-500 hover:bg-red-600 text-white font-semibold px-4 py-2 rounded-lg shadow transition duration-200 print:hidden"
+>
+  🔄 Reset Filters
+</button>
+
+      <button 
+      onclick="window.print()" 
+      class="bg-green-500 hover:bg-green-600 text-white font-semibold px-4 py-2 rounded-lg shadow transition duration-200 print:hidden"
+    >
+      🖨️ Print Rankings
+    </button>
+    
     </div>
 
     <section>
