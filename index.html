@@ -44,6 +44,11 @@
       <img src="assets/team-logo.png" alt="Team Logo" class="h-16" />
     </header>
 
+    <!-- COUNTDOWN TIMER -->
+    <div id="countdownBox" class="bg-yellow-100 text-yellow-900 px-4 py-2 rounded mb-4 text-center font-semibold text-lg">
+      Countdown to Festival Meet: <span id="countdownTimer">Loading...</span>
+    </div>
+
     <div id="controls" class="flex flex-wrap gap-4 mb-6 justify-center">
       <select id="genderFilter" class="p-2 border rounded">
         <option value="">All Genders</option>
@@ -71,7 +76,7 @@
 
     <section>
       <table class="min-w-full bg-white rounded shadow overflow-x-auto text-sm">
-        <thead class="bg-indigo-100 text-indigo-900">
+        <thead class="bg-indigo-100 text-indigo-900 sticky top-0 z-10">
           <tr>
             <th class="px-3 py-2">Rank</th>
             <th class="px-3 py-2">Name</th>
@@ -192,6 +197,12 @@
       filtered.sort((a,b) => b.sinclair - a.sinclair);
     }
 
+    // Handle no results
+    if(filtered.length === 0) {
+      tbody.innerHTML = `<tr><td colspan="10" class="text-center py-4 text-gray-600 italic">No results found.</td></tr>`;
+      return;
+    }
+
     // Render rows
     filtered.forEach((l, i) => {
       const tr = document.createElement("tr");
@@ -245,26 +256,63 @@
       document.getElementById("weightFilter").value = "";
       document.getElementById("teamFilter").value = "";
       currentSort = "total";
-      document.getElementById("sortTotalBtn").click();
+      showTotalColumn();
+
+      document.getElementById("sortTotalBtn").classList.add("bg-indigo-500", "text-white");
+      document.getElementById("sortTotalBtn").classList.remove("bg-gray-300", "text-gray-900");
+
+      document.getElementById("sortSinclairBtn").classList.remove("bg-indigo-500", "text-white");
+      document.getElementById("sortSinclairBtn").classList.add("bg-gray-300", "text-gray-900");
+
       renderTable();
     });
   }
 
-  // Initialize app after password success
-  function initializeApp() {
-    fetch("data.json")
-      .then(res => res.json())
-      .then(data => {
-        lifters = data;
-        populateFilters(lifters);
-        setupEventListeners();
-        showTotalColumn();  // Show Total column by default
-        renderTable();
-      })
-      .catch(err => {
-        console.error("Error loading data:", err);
-        alert("Failed to load lifter data.");
-      });
+  // Countdown timer function
+  function startCountdown(targetDate) {
+    const timerEl = document.getElementById("countdownTimer");
+
+    function updateCountdown() {
+      const now = new Date();
+      const diff = targetDate - now;
+
+      if (diff <= 0) {
+        timerEl.textContent = "Meet is in progress or has ended!";
+        // Optionally hide the whole countdown box
+        // document.getElementById("countdownBox").style.display = "none";
+        return;
+      }
+
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const minutes = Math.floor((diff / (1000 * 60)) % 60);
+      const seconds = Math.floor((diff / 1000) % 60);
+
+      timerEl.textContent = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+    }
+
+    updateCountdown(); // call immediately
+    setInterval(updateCountdown, 1000); // update every second
+  }
+
+  // Initialize app - load data & setup
+  async function initializeApp() {
+    // Load lifters data from JSON file
+    try {
+      const res = await fetch("data.json");
+      lifters = await res.json();
+    } catch (e) {
+      alert("Failed to load lifters data.");
+      return;
+    }
+
+    populateFilters(lifters);
+    setupEventListeners();
+    showTotalColumn();
+    renderTable();
+
+    // Start countdown timer to your meet
+    startCountdown(new Date("2025-07-15T09:00:00"));
   }
 </script>
 
