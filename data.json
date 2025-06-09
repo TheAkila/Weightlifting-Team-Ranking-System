@@ -196,8 +196,8 @@
       "team": "Team A",
       "weightClass": "53kg",
       "snatch": 40,
-      "cleanJerk": 45,
-      "total":85
+      "cleanJerk": 53,
+      "total":93
     },
 
     {
@@ -206,8 +206,8 @@
       "team": "Team A",
       "weightClass": "69kg",
       "snatch": 40,
-      "cleanJerk": 45,
-      "total":85
+      "cleanJerk": 50,
+      "total":90
     },
 
     {
