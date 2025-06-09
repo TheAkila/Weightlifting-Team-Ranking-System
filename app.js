@@ -76,7 +76,7 @@ fetch("data.json")
           <td class="px-3 py-2 col-rank">${i + 1}</td>
           <td class="px-3 py-2 col-name">${l.name}</td>
           <td class="px-3 py-2 col-gender">${l.gender}</td>
-          <td class="px-3 py-2 col-bw">${l.bodyweight.toFixed(1)}</td>
+           <td class="px-3 py-2 hidden">${l.bodyweight.toFixed(1)}</td>
           <td class="px-3 py-2 col-wclass">${l.weightClass}</td>
           <td class="px-3 py-2 col-snatch">${l.snatch}</td>
           <td class="px-3 py-2 col-cj">${l.cleanJerk}</td>

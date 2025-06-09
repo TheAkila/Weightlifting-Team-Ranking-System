@@ -180,7 +180,8 @@
             <th class="px-3 py-2">Rank</th>
             <th class="px-3 py-2">Name</th>
             <th class="px-3 py-2">Gender</th>
-            <th class="px-3 py-2">BW (kg)</th>
+            <!-- BW column hidden -->
+            <th class="px-3 py-2 hidden">BW (kg)</th>
             <th class="px-3 py-2">Weight Class</th>
             <th class="px-3 py-2">Snatch</th>
             <th class="px-3 py-2">Clean & Jerk</th>
@@ -244,174 +245,129 @@
     const weightClasses = [...new Set(data.map(l => l.weightClass))].sort((a,b) => {
       const numA = parseFloat(a);
       const numB = parseFloat(b);
-      if (a.includes('+')) return 1;
-      if (b.includes('+')) return -1;
-      return numA - numB;
+      return isNaN(numA) || isNaN(numB) ? a.localeCompare(b) : numA - numB;
     });
 
-    weightClasses.forEach(w => {
-      const option = document.createElement("option");
-      option.value = w;
-      option.textContent = w;
-      weightFilter.appendChild(option);
-    });
+    for (const wc of weightClasses) {
+      weightFilter.innerHTML += `<option value="${wc}">${wc}</option>`;
+    }
   }
 
-  function showTotalColumn() {
-    document.getElementById("totalHeader").classList.remove("hidden");
-    document.getElementById("sinclairHeader").classList.add("hidden");
-  }
-
-  function showSinclairColumn() {
-    document.getElementById("sinclairHeader").classList.remove("hidden");
-    document.getElementById("totalHeader").classList.add("hidden");
-  }
-
+  // Filter and render table rows
   function renderTable() {
-    const tbody = document.getElementById("rankingTable");
-    tbody.innerHTML = "";
+    const genderFilter = document.getElementById("genderFilter").value;
+    const weightFilter = document.getElementById("weightFilter").value;
+    const teamFilter = document.getElementById("teamFilter").value;
 
-    // Get filters
-    const gender = document.getElementById("genderFilter").value;
-    const weightClass = document.getElementById("weightFilter").value;
-    const team = document.getElementById("teamFilter").value;
-
-    // Filter lifters
-    let filtered = lifters.filter(l => 
-      (gender ? l.gender === gender : true) &&
-      (weightClass ? l.weightClass === weightClass : true) &&
-      (team ? l.team === team : true)
-    );
-
-    // Add Sinclair scores
-    filtered = filtered.map(l => ({
-      ...l,
-      sinclair: getSinclairScore(l.bodyweight, l.total, l.gender)
-    }));
-
-    // Sort by currentSort
-    if(currentSort === "total") {
-      filtered.sort((a,b) => b.total - a.total);
-    } else {
-      filtered.sort((a,b) => b.sinclair - a.sinclair);
-    }
-
-    // Handle no results
-    if(filtered.length === 0) {
-      tbody.innerHTML = `<tr><td colspan="10" class="text-center py-4 text-gray-600 italic">No results found.</td></tr>`;
-      return;
-    }
-
-    // Render rows
-    filtered.forEach((l, i) => {
-      const tr = document.createElement("tr");
-      tr.innerHTML = `
-        <td class="px-3 py-2">${i + 1}</td>
-        <td class="px-3 py-2">${l.name}</td>
-        <td class="px-3 py-2">${l.gender}</td>
-        <td class="px-3 py-2">${l.bodyweight.toFixed(1)}</td>
-        <td class="px-3 py-2">${l.weightClass}</td>
-        <td class="px-3 py-2">${l.snatch}</td>
-        <td class="px-3 py-2">${l.cleanJerk}</td>
-        <td class="px-3 py-2 font-semibold" style="display: ${currentSort === 'total' ? 'table-cell' : 'none'};">${l.total}</td>
-        <td class="px-3 py-2 font-semibold" style="display: ${currentSort === 'sinclair' ? 'table-cell' : 'none'};">${l.sinclair}</td>
-        <td class="px-3 py-2">${l.team}</td>
-      `;
-      tbody.appendChild(tr);
+    let filtered = lifters.filter(l => {
+      return (
+        (genderFilter === "" || l.gender === genderFilter) &&
+        (weightFilter === "" || l.weightClass === weightFilter) &&
+        (teamFilter === "" || l.team === teamFilter)
+      );
     });
+
+    // Compute Sinclair scores for all filtered lifters
+    filtered.forEach(l => {
+      l.sinclair = getSinclairScore(l.bodyweight, l.total, l.gender);
+    });
+
+    // Sort based on currentSort
+    if (currentSort === "total") {
+      filtered.sort((a, b) => b.total - a.total);
+    } else if (currentSort === "sinclair") {
+      filtered.sort((a, b) => b.sinclair - a.sinclair);
+    }
+
+    // Update table header visibility for Total / Sinclair
+    document.getElementById("totalHeader").classList.toggle("hidden", currentSort !== "total");
+    document.getElementById("sinclairHeader").classList.toggle("hidden", currentSort !== "sinclair");
+
+    // Build table rows HTML
+    let html = "";
+    filtered.forEach((l, i) => {
+      html += `
+        <tr>
+          <td class="px-3 py-2">${i + 1}</td>
+          <td class="px-3 py-2">${l.name}</td>
+          <td class="px-3 py-2 ">${l.gender}</td>
+          <!-- BW column hidden -->
+          <td class="px-3 py-2 hidden">${l.bodyweight.toFixed(1)}</td>
+          <td class="px-3 py-2">${l.weightClass}</td>
+          <td class="px-3 py-2">${l.snatch}</td>
+          <td class="px-3 py-2 col-cj">${l.cleanJerk}</td>
+
+          <td class="px-3 py-2 ${currentSort === "total" ? "" : "hidden"}">${l.total}</td>
+          <td class="px-3 py-2 ${currentSort === "sinclair" ? "" : "hidden"}">${l.sinclair.toFixed(2)}</td>
+          <td class="px-3 py-2">${l.team}</td>
+        </tr>
+      `;
+    });
+
+    document.getElementById("rankingTable").innerHTML = html;
   }
 
-  function setupEventListeners() {
+  // RESET filters and sort
+  function resetFilters() {
+    document.getElementById("genderFilter").value = "";
+    document.getElementById("weightFilter").value = "";
+    document.getElementById("teamFilter").value = "";
+    currentSort = "total";
+    renderTable();
+  }
+
+  // COUNTDOWN TIMER to June 30, 2025 18:00:00
+  function startCountdown() {
+    const targetDate = new Date("2025-06-30T18:00:00");
+    const timerElem = document.getElementById("countdownTimer");
+
+    function updateTimer() {
+      const now = new Date();
+      let diff = (targetDate - now) / 1000;
+      if (diff < 0) {
+        timerElem.textContent = "The festival has started!";
+        return;
+      }
+      const days = Math.floor(diff / (3600*24));
+      diff -= days * 3600 * 24;
+      const hours = Math.floor(diff / 3600);
+      diff -= hours * 3600;
+      const mins = Math.floor(diff / 60);
+      const secs = Math.floor(diff % 60);
+
+      timerElem.textContent = `${days}d ${hours}h ${mins}m ${secs}s`;
+      timerElem.classList.add("animate-fadeIn");
+    }
+    updateTimer();
+    setInterval(updateTimer, 1000);
+  }
+
+  // Initialize app after login
+  function initializeApp() {
+    // Load JSON data dynamically
+    fetch("data.json")
+      .then(response => response.json())
+      .then(data => {
+        lifters = data;
+        populateFilters(lifters);
+        renderTable();
+        startCountdown();
+      })
+      .catch(err => alert("Error loading data: " + err));
+
+    // Setup event listeners
     document.getElementById("genderFilter").addEventListener("change", renderTable);
     document.getElementById("weightFilter").addEventListener("change", renderTable);
     document.getElementById("teamFilter").addEventListener("change", renderTable);
-
     document.getElementById("sortTotalBtn").addEventListener("click", () => {
       currentSort = "total";
-      document.getElementById("sortTotalBtn").classList.add("bg-indigo-500", "text-white");
-      document.getElementById("sortTotalBtn").classList.remove("bg-gray-300", "text-gray-900");
-
-      document.getElementById("sortSinclairBtn").classList.remove("bg-indigo-500", "text-white");
-      document.getElementById("sortSinclairBtn").classList.add("bg-gray-300", "text-gray-900");
-
-      showTotalColumn();
       renderTable();
     });
-
     document.getElementById("sortSinclairBtn").addEventListener("click", () => {
       currentSort = "sinclair";
-      document.getElementById("sortSinclairBtn").classList.add("bg-indigo-500", "text-white");
-      document.getElementById("sortSinclairBtn").classList.remove("bg-gray-300", "text-gray-900");
-
-      document.getElementById("sortTotalBtn").classList.remove("bg-indigo-500", "text-white");
-      document.getElementById("sortTotalBtn").classList.add("bg-gray-300", "text-gray-900");
-
-      showSinclairColumn();
       renderTable();
     });
-
-    document.getElementById("resetBtn").addEventListener("click", () => {
-      document.getElementById("genderFilter").value = "";
-      document.getElementById("weightFilter").value = "";
-      document.getElementById("teamFilter").value = "";
-      currentSort = "total";
-      showTotalColumn();
-
-      document.getElementById("sortTotalBtn").classList.add("bg-indigo-500", "text-white");
-      document.getElementById("sortTotalBtn").classList.remove("bg-gray-300", "text-gray-900");
-
-      document.getElementById("sortSinclairBtn").classList.remove("bg-indigo-500", "text-white");
-      document.getElementById("sortSinclairBtn").classList.add("bg-gray-300", "text-gray-900");
-
-      renderTable();
-    });
-  }
-
-  // Countdown timer function
-  function startCountdown(targetDate) {
-    const timerEl = document.getElementById("countdownTimer");
-
-    function updateCountdown() {
-      const now = new Date();
-      const diff = targetDate - now;
-
-      if (diff <= 0) {
-        timerEl.textContent = "Meet is in progress or has ended!";
-        // Optionally hide the whole countdown box
-        // document.getElementById("countdownBox").style.display = "none";
-        return;
-      }
-
-      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
-      const minutes = Math.floor((diff / (1000 * 60)) % 60);
-      const seconds = Math.floor((diff / 1000) % 60);
-
-      timerEl.textContent = `${days}d ${hours}h ${minutes}m ${seconds}s`;
-    }
-
-    updateCountdown(); // call immediately
-    setInterval(updateCountdown, 1000); // update every second
-  }
-
-  // Initialize app - load data & setup
-  async function initializeApp() {
-    // Load lifters data from JSON file
-    try {
-      const res = await fetch("data.json");
-      lifters = await res.json();
-    } catch (e) {
-      alert("Failed to load lifters data.");
-      return;
-    }
-
-    populateFilters(lifters);
-    setupEventListeners();
-    showTotalColumn();
-    renderTable();
-
-    // Start countdown timer to your meet
-    startCountdown(new Date("2025-07-15T08:00:00"));
+    document.getElementById("resetBtn").addEventListener("click", resetFilters);
   }
 </script>
 
