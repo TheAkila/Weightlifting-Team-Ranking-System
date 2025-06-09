@@ -184,7 +184,7 @@
     "gender": "F",
     "team": "Team A",
     "weightClass": "77kg",
-    "bodyweight": 76.4,
+    "bodyweight": 78,
     "snatch": 50,
     "cleanJerk": 60,
     "total": 110
@@ -194,7 +194,7 @@
     "gender": "F",
     "team": "Team A",
     "weightClass": "48kg",
-    "bodyweight": 47.8,
+    "bodyweight": 47,
     "snatch": 35,
     "cleanJerk": 45,
     "total": 80
@@ -204,7 +204,7 @@
     "gender": "F",
     "team": "Team A",
     "weightClass": "58kg",
-    "bodyweight": 52.3,
+    "bodyweight": 57.5,
     "snatch": 40,
     "cleanJerk": 50,
     "total": 90
@@ -214,7 +214,7 @@
     "gender": "F",
     "team": "Team A",
     "weightClass": "69kg",
-    "bodyweight": 68.9,
+    "bodyweight": 60,
     "snatch": 42,
     "cleanJerk": 50,
     "total": 92
@@ -224,7 +224,7 @@
     "gender": "F",
     "team": "Team A",
     "weightClass": "69kg",
-    "bodyweight": 68.4,
+    "bodyweight": 65,
     "snatch": 38,
     "cleanJerk": 49,
     "total": 83
@@ -234,7 +234,7 @@
     "gender": "F",
     "team": "Team A",
     "weightClass": "86kg",
-    "bodyweight": 85.3,
+    "bodyweight": 88.45,
     "snatch": 40,
     "cleanJerk": 55,
     "total": 95
@@ -244,7 +244,7 @@
     "gender": "F",
     "team": "Team A",
     "weightClass": "86kg+",
-    "bodyweight": 87,
+    "bodyweight": 90.7,
     "snatch": 0,
     "cleanJerk": 0,
     "total": 0
@@ -254,7 +254,7 @@
     "gender": "F",
     "team": "Team A",
     "weightClass": "77kg",
-    "bodyweight": 76.2,
+    "bodyweight": 74,
     "snatch": 28,
     "cleanJerk": 35,
     "total": 63
@@ -284,7 +284,7 @@
     "gender": "F",
     "team": "Team B",
     "weightClass": "48kg",
-    "bodyweight": 47.9,
+    "bodyweight": 47,
     "snatch": 25,
     "cleanJerk": 30,
     "total": 55
