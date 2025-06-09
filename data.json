@@ -123,8 +123,8 @@
     "team": "Team A",
     "weightClass": "88kg",
     "snatch": 110,
-    "cleanJerk": 130,
-    "total": 240
+    "cleanJerk": 140,
+    "total": 250
   },
   {
     "name": "Akila",
@@ -142,9 +142,9 @@
       "gender": "M",
       "team": "Past Lifter",
       "weightClass": "110kg",
-      "snatch": 98,
+      "snatch": 110,
       "cleanJerk": 135,
-      "total":233
+      "total":245
     },
 
     {
@@ -196,8 +196,8 @@
       "team": "Team A",
       "weightClass": "53kg",
       "snatch": 40,
-      "cleanJerk": 53,
-      "total":93
+      "cleanJerk": 50,
+      "total":90
     },
 
     {
@@ -205,9 +205,9 @@
       "gender": "F",
       "team": "Team A",
       "weightClass": "69kg",
-      "snatch": 40,
+      "snatch": 42,
       "cleanJerk": 50,
-      "total":90
+      "total":92
     },
 
     {
@@ -235,9 +235,9 @@
       "gender": "F",
       "team": "Team A",
       "weightClass": "86kg+",
-      "snatch": 38,
-      "cleanJerk": 50,
-      "total":88
+      "snatch": 0,
+      "cleanJerk": 0,
+      "total":0
     },
 
     {
@@ -255,9 +255,9 @@
       "gender": "F",
       "team": "Team B",
       "weightClass": "53kg",
-      "snatch": 28,
-      "cleanJerk": 35,
-      "total":63
+      "snatch": 25,
+      "cleanJerk": 30,
+      "total":55
     },
 
     {
@@ -275,9 +275,9 @@
       "gender": "F",
       "team": "Team B",
       "weightClass": "48kg",
-      "snatch": 28,
-      "cleanJerk": 35,
-      "total":63
+      "snatch": 25,
+      "cleanJerk": 30,
+      "total":55
     }
 
 
