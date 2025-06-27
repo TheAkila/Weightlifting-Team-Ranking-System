@@ -5,9 +5,9 @@
     "team": "Team B",
     "weightClass": "79kg",
     "bodyweight": 78.9,
-    "snatch": 75,
-    "cleanJerk": 95,
-    "total": 170
+    "snatch": 80,
+    "cleanJerk": 100,
+    "total": 180
   },
   {
     "name": "Dulneth",
@@ -57,9 +57,9 @@
     "team": "Team B",
     "weightClass": "60kg",
     "bodyweight": 59.5,
-    "snatch": 60,
-    "cleanJerk": 83,
-    "total": 140
+    "snatch": 68,
+    "cleanJerk": 93,
+    "total": 161
   },
   {
     "name": "Nisal",
@@ -67,9 +67,9 @@
     "team": "Team B",
     "weightClass": "110kg+",
     "bodyweight": 111,
-    "snatch": 50,
-    "cleanJerk": 50,
-    "total": 100
+    "snatch": 65,
+    "cleanJerk": 75,
+    "total": 140
   },
   {
     "name": "Didula",
@@ -77,9 +77,9 @@
     "team": "Team B",
     "weightClass": "79kg",
     "bodyweight": 78.7,
-    "snatch": 50,
-    "cleanJerk": 50,
-    "total": 100
+    "snatch": 65,
+    "cleanJerk": 75,
+    "total": 140
   },
   {
     "name": "Sahan W",
@@ -91,16 +91,7 @@
     "cleanJerk": 55,
     "total": 100
   },
-  {
-    "name": "Kavindu",
-    "gender": "M",
-    "team": "Team B",
-    "weightClass": "88kg",
-    "bodyweight": 87.8,
-    "snatch": 75,
-    "cleanJerk": 95,
-    "total": 170
-  },
+
   {
     "name": "Vishwa",
     "gender": "M",
@@ -117,9 +108,9 @@
     "team": "Team B",
     "weightClass": "60kg",
     "bodyweight": 59.8,
-    "snatch": 65,
+    "snatch": 75,
     "cleanJerk": 80,
-    "total": 145
+    "total": 155
   },
   {
     "name": "Ashen",
@@ -137,9 +128,9 @@
     "team": "Team A",
     "weightClass": "79kg",
     "bodyweight": 78.6,
-    "snatch": 130,
+    "snatch": 134,
     "cleanJerk": 140,
-    "total": 270
+    "total": 274
   },
   {
     "name": "Gotta",
@@ -156,10 +147,10 @@
     "gender": "M",
     "team": "Team A",
     "weightClass": "94kg",
-    "bodyweight": 93.2,
-    "snatch": 70,
-    "cleanJerk": 90,
-    "total": 160
+    "bodyweight": 85,
+    "snatch": 90,
+    "cleanJerk": 110,
+    "total": 200
   },
   {
     "name": "Killer",
@@ -168,8 +159,8 @@
     "weightClass": "110kg",
     "bodyweight": 109.7,
     "snatch": 110,
-    "cleanJerk": 135,
-    "total": 245
+    "cleanJerk": 140,
+    "total": 250
   },
   {
     "name": "Dhananjaya",
@@ -177,9 +168,9 @@
     "team": "Team B",
     "weightClass": "94kg",
     "bodyweight": 93.8,
-    "snatch": 70,
-    "cleanJerk": 90,
-    "total": 160
+    "snatch": 78,
+    "cleanJerk": 95,
+    "total": 173
   },
   {
     "name": "Sanka",
@@ -188,8 +179,19 @@
     "weightClass": "110kg+",
     "bodyweight": 111.5,
     "snatch": 60,
-    "cleanJerk": 80,
-    "total": 140
+    "cleanJerk": 90,
+    "total": 150
+  },
+
+  {
+    "name": "Vathsala",
+    "gender": "M",
+    "team": "B Team",
+    "weightClass": "60kg",
+    "bodyweight": 58,
+    "snatch": 40,
+    "cleanJerk": 55,
+    "total": 95
   },
   {
     "name": "Poorni",
@@ -197,9 +199,9 @@
     "team": "Team A",
     "weightClass": "77kg",
     "bodyweight": 78,
-    "snatch": 50,
+    "snatch": 55,
     "cleanJerk": 60,
-    "total": 110
+    "total": 115
   },
   {
     "name": "Venumi",
@@ -208,24 +210,24 @@
     "weightClass": "48kg",
     "bodyweight": 47,
     "snatch": 35,
-    "cleanJerk": 45,
-    "total": 80
+    "cleanJerk": 48,
+    "total": 83
   },
   {
     "name": "Piyumi",
     "gender": "F",
     "team": "Team A",
     "weightClass": "58kg",
-    "bodyweight": 57.5,
-    "snatch": 40,
+    "bodyweight": 57,
+    "snatch": 42,
     "cleanJerk": 50,
-    "total": 90
+    "total": 92
   },
   {
     "name": "Yasali",
     "gender": "F",
     "team": "Team A",
-    "weightClass": "69kg",
+    "weightClass": "63kg",
     "bodyweight": 60,
     "snatch": 42,
     "cleanJerk": 50,
@@ -237,9 +239,9 @@
     "team": "Team A",
     "weightClass": "69kg",
     "bodyweight": 65,
-    "snatch": 38,
-    "cleanJerk": 49,
-    "total": 83
+    "snatch": 40,
+    "cleanJerk": 53,
+    "total": 93
   },
   {
     "name": "Shermila",
@@ -278,8 +280,8 @@
     "weightClass": "53kg",
     "bodyweight": 52.7,
     "snatch": 25,
-    "cleanJerk": 30,
-    "total": 55
+    "cleanJerk": 33,
+    "total": 58
   },
   {
     "name": "Sithumini",
@@ -300,5 +302,16 @@
     "snatch": 25,
     "cleanJerk": 30,
     "total": 55
+  },
+
+  {
+    "name": "Anuththara",
+    "gender": "F",
+    "team": "Team B",
+    "weightClass": "69kg",
+    "bodyweight": 63,
+    "snatch": 23,
+    "cleanJerk": 25,
+    "total": 48
   }
 ]
